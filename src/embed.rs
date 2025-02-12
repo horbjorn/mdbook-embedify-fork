@@ -1,6 +1,7 @@
 use crate::cfg;
 use crate::utils;
 
+// use clap::builder::styling::Color;
 use mdbook::{
     book::Book,
     errors::Error,

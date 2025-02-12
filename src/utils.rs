@@ -1,4 +1,3 @@
-use pulldown_cmark;
 use regex::Regex;
 use rust_embed::RustEmbed;
 
@@ -10,7 +9,7 @@ pub fn render_markdown_processor(content: String) -> String {
     let mut html = String::new();
     let parser = pulldown_cmark::Parser::new(&content);
     pulldown_cmark::html::push_html(&mut html, parser);
-    html.into()
+    html
 }
 
 pub fn parse_options(options_str: &str) -> Vec<(String, String)> {

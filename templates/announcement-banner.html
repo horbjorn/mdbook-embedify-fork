@@ -19,34 +19,79 @@
   .announcement-banner {
     --site-announcement-bar-stripe-color1: #e5e7eb;
     --site-announcement-bar-stripe-color2: #d1d5db;
+    color:#191818
   }
   .announcement-banner[data-theme="ocean"] {
     --site-announcement-bar-stripe-color1: #86b2f9;
     --site-announcement-bar-stripe-color2: #7298ea;
+    color: #0e0d0d; 
   }
   .announcement-banner[data-theme="forest"] {
     --site-announcement-bar-stripe-color1: #97f5d6;
     --site-announcement-bar-stripe-color2: #6de0bf;
+    color: #0e0d0d;
   }
   .announcement-banner[data-theme="lava"] {
     --site-announcement-bar-stripe-color1: #fea3a3;
     --site-announcement-bar-stripe-color2: #e57e7e;
+    color: #0e0d0d;
+  }
+
+  .announcement-banner[data-theme="construction"] {
+    --site-announcement-bar-stripe-color1: #fbbf24;
+    --site-announcement-bar-stripe-color2: #0e0d0d;
+    
   }
   html:is(.navy, .coal, .ayu) .announcement-banner {
     --site-announcement-bar-stripe-color1: #1f2937;
     --site-announcement-bar-stripe-color2: #111827;
+    color: var(--fg);
   }
-  html:is(.navy, .coal, .ayu) .announcement-banner[data-theme="ocean"] {
+  html:is(.navy, .coal, .ayu, .frappe, .mocha, .macchiato, .nordic) .announcement-banner[data-theme="ocean"] {
     --site-announcement-bar-stripe-color1: #2563eb;
     --site-announcement-bar-stripe-color2: #1d4ed8;
+    color:#0e0d0d;
   }
-  html:is(.navy, .coal, .ayu) .announcement-banner[data-theme="forest"] {
+  html:is(.navy, .coal, .ayu, .frappe, .mocha, .macchiato, .nordic) .announcement-banner[data-theme="forest"] {
     --site-announcement-bar-stripe-color1: #22d3a5;
     --site-announcement-bar-stripe-color2: #0fbf8f;
+    color:#0e0d0d;
   }
-  html:is(.navy, .coal, .ayu) .announcement-banner[data-theme="lava"] {
+  html:is(.navy, .coal, .ayu, .frappe, .mocha, .macchiato, .nordic) .announcement-banner[data-theme="lava"] {
     --site-announcement-bar-stripe-color1: #f87171;
     --site-announcement-bar-stripe-color2: #ef4444;
+    color:#0e0d0d;
+  }
+  html:is(.navy, .coal, .ayu) .announcement-banner[data-theme="construction"] {
+    --site-announcement-bar-stripe-color1: #fbbf24;
+    --site-announcement-bar-stripe-color2: #0e0d0d;
+  }
+
+  .announcement-banner[data-theme="construction"] p:first-of-type  {
+    width: auto;
+    padding: 0 0.5rem;
+    color: #0e0d0d;
+    border-radius: 0.5rem;
+    border: #0e0d0d 0.25rem solid;
+    background-color: #fbbf24;
+    font-weight: bold;
+    display:inline-block;
+    }
+
+    .announcement-banner[data-theme="construction"] p button {
+    top: 50%;
+    right: 1rem;
+    color: #0e0d0d;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer !important;
+    border: #0e0d0d 0.25rem solid;
+    font-weight: 900;
+    border-radius: 25%;
+    display: inline-block;
+    background-color: #fbbf24;
   }
   .announcement-banner p {
     width: 100%;

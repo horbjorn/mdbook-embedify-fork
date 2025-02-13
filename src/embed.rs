@@ -50,7 +50,7 @@ fn render_general_embeds(content: String) -> String {
         .to_string();
 
     // replace the placeholders with the ignored content
-    if ignored_sections.len() > 0 {
+    if ignored_sections.is_empty() {
         for (placeholder, ignored) in ignored_sections {
             content = content.replace(&placeholder, &ignored);
         }

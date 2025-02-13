@@ -1,6 +1,7 @@
 use regex::Regex;
 use rust_embed::RustEmbed;
 
+
 #[derive(RustEmbed)]
 #[folder = "templates"]
 struct Assets;
@@ -42,10 +43,19 @@ pub fn render_template(app: &str, placeholders: &[(String, String)]) -> String {
     let template = std::str::from_utf8(file.data.as_ref()).unwrap();
 
     // create a processors vec
-    let processors: Vec<(String, fn(String) -> String)> = vec![
-        ("raw".to_string(), |content| content),
-        ("markdown".to_string(), render_markdown_processor),
-    ];
+    // let processors: Vec<(String, fn(String) -> String)> = vec![
+    //     ("raw".to_string(), |content| content),
+    //     ("markdown".to_string(), render_markdown_processor),
+    // ];
+
+    type ProcessorFn = fn(String) -> String;
+
+let processors: Vec<(String, ProcessorFn)> = vec![
+    ("raw".to_string(), |content| content),
+    ("markdown".to_string(), render_markdown_processor),
+];
+
+
 
     // render placeholders
     let mut result = template.to_string();

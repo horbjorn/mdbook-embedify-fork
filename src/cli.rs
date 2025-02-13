@@ -21,11 +21,9 @@ impl Cli {
             );
 
         let matches = cmd.clone().get_matches();
-        if !matches.args_present() {
-            if io::stdin().is_terminal() {
-                cmd.clone().print_help().unwrap();
-                process::exit(1);
-            }
+        if !matches.args_present() && io::stdin().is_terminal() {
+            cmd.clone().print_help().unwrap();
+            process::exit(1);
         }
 
         Self { cmd }

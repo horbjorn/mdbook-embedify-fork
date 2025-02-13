@@ -1,6 +1,6 @@
 book
 target
-gemini-help.md
+src/gemini-help.md
 preview.png
 cargo.lock
 cargo.toml
